@@ -1,5 +1,8 @@
 package com.example.projetoestudo
 
+
+//Pra armazenar dados, no kotlin utilzamos data class,
+// da uma olhada https://kotlinlang.org/docs/data-classes.html
 class Livro {
     var titulo:String
     var dataPublicacao: String

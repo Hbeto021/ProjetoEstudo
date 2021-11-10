@@ -6,11 +6,15 @@ import android.util.Log
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
+//pode declarar essas variaveis no scopo global da classe
 lateinit var reciclerView: RecyclerView
 lateinit var listaLivro: ArrayList<Livro>
 lateinit var adapter: RecyclerView.Adapter<AdapterItem.itemViewHolder>
 
 class MainActivity : AppCompatActivity() {
+
+    //scopo global
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -18,6 +22,7 @@ class MainActivity : AppCompatActivity() {
 
 
         listaLivro = ArrayList()
+        //nesse caso pode usar val ao inves de var, pois os objetos não serão substituidos
         var livro1 = Livro("Do Mil ao Milhão. Sem Cortar o Cafezinho.", "10/11/2018", "Thiago Nigro ")
         var livro2 = Livro("Pai rico, pai pobre", "26/07/2017", "Robert T. Kiyosaki ")
 
